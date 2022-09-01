@@ -1,14 +1,44 @@
-import React from 'react';
-import Item from './Item';
+import React, { useState } from "react";
+import Item from "./Person/Item";
 
-const ItemList = ({ list }) => {
+
+/*const Items = () => {
+ 
+
   return (
-    <ul>
-      {list.map((teclado) => (
-        <Item teclado={teclado} key={teclado.nombre} />
-      ))}
-    </ul>
+    <div className="row">
+      {items.map((item) => {
+        return (
+          <Item
+            key={item.id}
+            nombre={item.nombre}
+            img={item.img}
+            precio={item.precio}
+          />
+        );  
+      })}
+    </div>
   );
 };
 
-export default ItemList;
+export default Items;*/
+
+const ItemList = ({ teclados }) => {
+    return (
+        <div className="row">
+        {teclados.map((teclado) => {
+          return (
+            <Item
+              key={teclado.id}
+              nombre={teclado.nombre}
+              img={teclado.img}
+              precio={teclado.precio}
+            />
+          );  
+        })}
+      </div>
+    );
+  };
+  
+  export default ItemList;
+

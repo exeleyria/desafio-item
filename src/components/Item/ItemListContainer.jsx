@@ -20,7 +20,7 @@ const ItemListContainer = () => {
         .finally(() => setIsLoading(false));
     }, []);
   
-    return isLoading ? <h2>Cargando...</h2> : <ItemList list={teclado} />;
+    return isLoading ? <h2>Cargando...</h2> : <ItemList teclados={teclado} />;
   };
   
   export default ItemListContainer;
