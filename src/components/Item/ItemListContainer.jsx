@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import ItemList from './ItemList';
-import teclado from './teclado';
+import teclados from './teclados';
 
 const ItemListContainer = () => {
-    const [teclados, setTeclados] = useState([]);
+    const [teclado, setTeclados] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
   
     useEffect(() => {

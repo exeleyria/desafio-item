@@ -14,7 +14,7 @@ const Item = (teclado) => {
           </div>
           <div className="">
             <h4>{teclado.nombre}</h4>
-            <p className="text-muted">{teclado .precio}</p>
+            <p className="text-muted">{teclado.precio}</p>
           </div>
         </div>
       </div>
