@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import ItemDetail from './ItemDetail';
-import teclado from '../Item/teclados';
+import teclados from '../Item/teclados';
 
 const ItemDetailContainer = () => {
-    const [teclado, setItem] = useState([]);
+    const [item, setItem] = useState([]);
 
     const GetProduct = () => new Promise((resolve, reject) =>{
-        setTimeout(()=> resolve(teclado.find(teclado => teclado.id === 1)), 2000)
+        setTimeout(()=> resolve(teclados.find(teclado => teclado.id === 5)), 2000)
     })
    
     useEffect(() =>{
         GetProduct()
         .then(response => setItem(response))
-    },{})
+    },[])
 
     return(
-        <ItemDetail teclado={teclado}/>
+        <ItemDetail item={item} />
     )
 
   };

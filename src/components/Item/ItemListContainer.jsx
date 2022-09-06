@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ItemList from './ItemList';
-import teclados from './teclados';
+import teclados from '../Item/teclados';
 
 const ItemListContainer = () => {
     const [teclado, setTeclados] = useState([]);
@@ -20,7 +20,7 @@ const ItemListContainer = () => {
         .finally(() => setIsLoading(false));
     }, []);
   
-    return isLoading ? <h2>Cargando...</h2> : <ItemList teclados={teclado} />;
+    return isLoading ? <h2>Cargando...</h2> : <ItemList teclados={teclados} />;
   };
   
   export default ItemListContainer;
